@@ -16,15 +16,6 @@ app.get('/', function(req, res){
 	 res.sendFile(__dirname + '/index.html');
 });
 
-<!-- //testing counter for classes -->
-var cs225_count = 0;
-var cs241_count = 0;
-var cs374_count = 0;
-var cs225_rating = 0;
-var cs241_rating = 0;
-var cs374_rating = 0;
-
-//end of test
 var id = 1;
 var online = 0;
 var random_color = getRandomColor();
@@ -56,9 +47,6 @@ io.on('connection', function(socket){
 		online--;
 		io.emit('one less user', online);
 	});
-	//testing for cs
-
-	//end of cs test
 
 	id++;
 	random_color = getRandomColor();
