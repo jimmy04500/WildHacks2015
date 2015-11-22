@@ -1,5 +1,5 @@
 var express = require('express');
-var app = express();
+var app = express().use(express.static(__dirname + '/'));
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
@@ -25,8 +25,8 @@ io.on('connection', function(socket){
 	io.emit('user connected', ('Anon#' + my_id).fontcolor(rand_color) + ' is connected');
 
 	//count # of people online
-		online = online + 1;
-		io.emit('one more user', online);
+	online = online + 1;
+	io.emit('one more user', online);
 
 	socket.on('chat message', function(msg){
 		var test = "Anon#"+ my_id;
