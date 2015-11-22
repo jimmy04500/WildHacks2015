@@ -41,7 +41,7 @@ io.on('connection', function(socket){
 		var test = "Anon#"+ my_id;
 		var test_it = test.fontcolor(rand_color);
 		if (msg.toString().toLowerCase() == "cat") {
-			msg = "https://cdn1.vox-cdn.com/thumbor/vgHtNlYCemvKR2WljMqRfF5tkwo=/0x32:1024x608/1050x591/cdn0.vox-cdn.com/uploads/chorus_image/image/45329786/GrouponCat.0.jpg";
+			msg = "https://www.groupon.com/blog/wp-content/blogs.dir/20/files/2013/04/gpn_skynet2_fullcat.jpg";
 			io.emit('image message', msg);
 		}
 		else {
