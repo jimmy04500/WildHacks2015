@@ -44,7 +44,7 @@
 	
 	#sidebar {
 		background-color: #eee;
-		left: 87%;
+		left: 98%;
 		height: 70%;
 		width: 15%;
 		border: 1px black solid;
@@ -52,16 +52,24 @@
 		position: fixed;
 		border-radius: 5px;
 		float: right;
+		transition-property: left;
+		transition-duration: 0.15s;
+		transition-timing-function: linear;
 	}
-	#sidebar: hover {
-		background-color: black;
+	#sidebar:hover {
+		left: 86%;
 	}
 	#sidebar #items {
 		list-style-type: none;
 	}
 	#sidebar li {
 		font-size: 22px;
-		margin: 20px 40px;
+		margin: 10px 27px;
+		padding: 5px 5px;
+	}
+	#sidebar li:hover {
+		background-color: black;
+		color: white;
 	}
 
 </style>
